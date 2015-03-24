@@ -7,7 +7,6 @@ var qt = require('quickthumb');
 var morgan = require('morgan');
 var logger = morgan('combined');
 
-
 var routes = require('./routes/index');
 
 var app = express();
@@ -18,8 +17,8 @@ app.use(qt.static(__dirname + '/uploads'));
 app.use(logger);
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
